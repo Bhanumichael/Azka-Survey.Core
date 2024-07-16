@@ -11,23 +11,23 @@ namespace Azka_Survey.Tests
 {
     public class BaseTest
     {
-        protected UiHelpers uiHelpers;  
-        protected LoginPage loginPage; 
-        protected HomePage  homePage;   
+        protected UiHelpers uiHelpers;
+        protected LoginPage loginPage;
+        protected HomePage homePage;
 
         [TestInitialize]
-        public void StartTest() 
+        public void StartTest()
         {
             DriverContext.StartDriver("Chrome");
-            uiHelpers = new UiHelpers();    
-            loginPage = new LoginPage();        
-            homePage = new HomePage();      
+            uiHelpers = new UiHelpers();
+            loginPage = new LoginPage();
+            homePage = new HomePage();
         }
         [TestCleanup]
         public void StopTest()
         {
             Thread.Sleep(1000);
-            DriverContext.Driver.Quit();    
+            DriverContext.Driver.Quit();
         }
     }
 }

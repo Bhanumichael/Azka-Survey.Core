@@ -8,13 +8,13 @@ namespace Azka_Survey.Core
         public static WebDriver Driver;
         public static WebDriver StartDriver(string browser)
         {
-            switch (browser) 
+            switch (browser)
             {
                 case "Chrome":
-                    Driver=new ChromeDriver();
-                    break;  
+                    Driver = new ChromeDriver();
+                    break;
             }
-            return Driver;  
+            return Driver;
         }
     }
 }
