@@ -6,8 +6,12 @@ namespace Azka_Survey.Tests
     public class AzkaSurvey_Tests:BaseTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void VerifyThatUserCanFillTheLoginDetailsInForm()
         {
+            uiHelpers.NavigateToUrl();
+            loginPage.Entername("pruthvi");
+            loginPage.Enterpassword("rMmGPja");
+            loginPage.ClickForLogin();
 
         }
     }
