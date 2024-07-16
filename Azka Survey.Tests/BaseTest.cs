@@ -22,7 +22,6 @@ namespace Azka_Survey.Tests
             uiHelpers = new UiHelpers();    
             loginPage = new LoginPage();        
             homePage = new HomePage();      
-
         }
         [TestCleanup]
         public void StopTest()

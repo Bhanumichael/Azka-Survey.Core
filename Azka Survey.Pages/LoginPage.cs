@@ -5,11 +5,11 @@ using OpenQA.Selenium;
 
 namespace Azka_Survey.Pages
 {
-    public class LoginPage  
+    public class LoginPage
     {
         IWebElement entername => DriverContext.Driver.FindElement(By.XPath(""));
         IWebElement enterpassword => DriverContext.Driver.FindElement(By.XPath(""));
-        IWebElement loginpage => DriverContext.Driver.FindElement(By.XPath(""));    
+        IWebElement loginpage => DriverContext.Driver.FindElement(By.XPath(""));
 
 
 
@@ -28,10 +28,9 @@ namespace Azka_Survey.Pages
         }
         public void ClickForLogin()
         {
-            loginpage.Click();  
+            loginpage.Click();
         }
 
 
     }
 }
-  

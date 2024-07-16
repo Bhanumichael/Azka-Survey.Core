@@ -13,6 +13,5 @@ namespace Azka_Survey.Core
             DriverContext.Driver.Navigate().GoToUrl("https://www.azkasurvey.com/");
             DriverContext.Driver.Manage().Window.Maximize();
         }
-
     }
 }
