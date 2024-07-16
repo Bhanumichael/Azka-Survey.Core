@@ -8,6 +8,7 @@ namespace Azka_Survey.Tests
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

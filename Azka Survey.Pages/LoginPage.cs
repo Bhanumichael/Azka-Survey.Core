@@ -7,9 +7,9 @@ namespace Azka_Survey.Pages
 {
     public class LoginPage
     {
-        IWebElement entername => DriverContext.Driver.FindElement(By.XPath(""));
-        IWebElement enterpassword => DriverContext.Driver.FindElement(By.XPath(""));
-        IWebElement loginpage => DriverContext.Driver.FindElement(By.XPath(""));
+        IWebElement entername => DriverContext.Driver.FindElement(By.XPath("//input[@type='text']"));
+        IWebElement enterpassword => DriverContext.Driver.FindElement(By.XPath("//input[@type='password']"));
+        IWebElement loginpage => DriverContext.Driver.FindElement(By.XPath("//button[@type='submit']"));
 
 
         public void verifyTheLoginPage()
@@ -21,9 +21,9 @@ namespace Azka_Survey.Pages
         {
             entername.SendKeys(Name);
         }
-        public void Enterpassword(string Name)
+        public void Enterpassword(string password)
         {
-            enterpassword.SendKeys(Name);
+            enterpassword.SendKeys(password);
         }
         public void ClickForLogin()
         {
