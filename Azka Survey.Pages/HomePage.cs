@@ -8,6 +8,5 @@ namespace Azka_Survey.Pages
 {
     public class HomePage
     {
-
     }
 }

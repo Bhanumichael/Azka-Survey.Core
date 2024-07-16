@@ -12,7 +12,6 @@ namespace Azka_Survey.Pages
         IWebElement loginpage => DriverContext.Driver.FindElement(By.XPath(""));
 
 
-
         public void verifyTheLoginPage()
         {
             Assert.IsTrue(entername.Displayed, "The LoginPage is not displayed");

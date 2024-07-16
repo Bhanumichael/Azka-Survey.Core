@@ -28,6 +28,5 @@ namespace Azka_Survey.Tests
         { 
             DriverContext.Driver.Quit();    
         }
-        
     }
 }
