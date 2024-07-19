@@ -30,6 +30,7 @@ namespace Azka_Survey.Tests
             homePage.EnterWard("15");
             homePage.ClickOnSaveAndProceed();
 
+<<<<<<< HEAD
 
             
             homePage.EnterTotalFamilyMembers("4");
@@ -39,6 +40,19 @@ namespace Azka_Survey.Tests
             homePage.EnterOccupation("Business");
             homePage.EnterTotalMales("2");
             
+=======
+        [TestMethod]
+        public void VerifyThatUserCanLoginAndCheckDashboardViews()
+        {
+            uiHelpers.NavigateToUrl();
+            loginPage.Enterthename("bhanuprakash01.testing@gmail.com");
+            loginPage.Enterthepassword("MUjJGb5O");
+            loginPage.ClickForLogin();
+            homePage.ClickOnDashboard();
+            homePage.ClickOnViewfile();
+            homePage.ClickOnSignout();  
+
+>>>>>>> f35d3030b67477c49de5a1ae7c457d9bd93bd905
         }
         
         

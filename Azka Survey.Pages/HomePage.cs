@@ -17,6 +17,7 @@ namespace Azka_Survey.Pages
         IWebElement enterCountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
         IWebElement enterPhone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
         IWebElement enterTown => DriverContext.Driver.FindElement(By.XPath("//input[@name='town']"));
+<<<<<<< HEAD
         IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[12]"));
         IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[13]"));
         IWebElement enterConstituencyMP => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[14]"));
@@ -32,6 +33,21 @@ namespace Azka_Survey.Pages
         IWebElement enterOccupation => DriverContext.Driver.FindElement(By.XPath("//select[@name='occupation' and @class='form-control']"));
         IWebElement enterTotalMales => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='totalmale' and @class='form-control']"));
         IWebElement SaveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button' and @class='btn btn-primary ms-auto' and @onclick='next()' and text()='Save And Proceed']"));
+=======
+        IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMLA']"));
+        IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("//input[@name='mandal']"));
+        IWebElement enterConstituencyMP => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMP']"));
+        IWebElement enterReligion => DriverContext.Driver.FindElement(By.XPath("//input[@name='religion']"));
+        IWebElement enterAge => DriverContext.Driver.FindElement(By.XPath("//input[@name='age']"));
+        IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("//input[@name='caste']"));
+        IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("//input[@name='ward']"));
+        IWebElement saveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
+        IWebElement clickonDashboard => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/dashboard']"));
+        IWebElement clickonviewfile => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/view/480']"));
+        IWebElement clickonSignout => DriverContext.Driver.FindElement(By.XPath("//a[@href='#']"));
+
+
+>>>>>>> f35d3030b67477c49de5a1ae7c457d9bd93bd905
 
         public void EnterNameCadidate(string name)
         {
@@ -40,7 +56,7 @@ namespace Azka_Survey.Pages
 
         public void ClickOnGender()
         {
-            enterGender.Click();    
+            enterGender.Click();
         }
 
         public void EnterAddress(string address)
@@ -102,6 +118,7 @@ namespace Azka_Survey.Pages
         {
             clicksaveAndProceedButton.Click();
         }
+<<<<<<< HEAD
         public void EnterTotalFamilyMembers(string totalFamilyMembers)
         {
             enterTotalFamilyMembers.SendKeys(totalFamilyMembers);
@@ -129,6 +146,22 @@ namespace Azka_Survey.Pages
         public void saveAndProceedButton()
         {
             SaveAndProceedButton.Click();
+
+        public void ClickOnDashboard()
+        {
+            clickonDashboard.Click();
+
+        }
+        public void ClickOnViewfile()
+        {
+            clickonviewfile.Click();
+
+        }
+
+        public void ClickOnSignout()
+        {
+            clickonSignout.Click(); 
+ 
         }
 
 
