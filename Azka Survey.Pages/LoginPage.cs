@@ -24,7 +24,6 @@ namespace Azka_Survey.Pages
         {
             enterpassword.SendKeys(password);
         }
-
         public void ClickForLogin()
         {
             loginpage.Click();

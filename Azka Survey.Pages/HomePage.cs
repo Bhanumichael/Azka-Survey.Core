@@ -12,7 +12,7 @@ namespace Azka_Survey.Pages
     public class HomePage
     {
         IWebElement enterNameofCandidate => DriverContext.Driver.FindElement(By.XPath("//div[@class='card-body']//input[@name='name']"));
-        IWebElement enterGender => DriverContext.Driver.FindElement(By.XPath("//input[@name='gender']"));
+        IWebElement enterGender => DriverContext.Driver.FindElement(By.XPath("(//input[@name='gender'])[1]"));
         IWebElement enterAddress => DriverContext.Driver.FindElement(By.XPath("//input[@name='address']"));
         IWebElement enterCountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
         IWebElement enterPhone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
@@ -31,9 +31,9 @@ namespace Azka_Survey.Pages
             enterNameofCandidate.SendKeys(name);
         }
 
-        public void EnterGender(string gender)
+        public void ClickOnGender()
         {
-            enterGender.SendKeys(gender);
+            enterGender.Click();    
         }
 
         public void EnterAddress(string address)

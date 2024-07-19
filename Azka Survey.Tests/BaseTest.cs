@@ -28,7 +28,7 @@ namespace Azka_Survey.Tests
         [TestCleanup]
         public void StopTest()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(7000);
             DriverContext.Driver.Quit();
         }
     }

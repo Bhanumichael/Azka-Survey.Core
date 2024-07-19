@@ -12,16 +12,16 @@ namespace Azka_Survey.Tests
         public void VerifyThatUserCanLoginWithValidCredentials()
         {
             uiHelpers.NavigateToUrl();
-            loginPage.Enterthename(".testing@gmail.com");
-            loginPage.Enterthepassword("");
+            loginPage.Enterthename("bhanuprakash01.testing@gmail.com");
+            loginPage.Enterthepassword("MUjJGb5O");
             loginPage.ClickForLogin();
-            homePage.EnterNameCadidate("");
-            homePage.EnterGender("Male");
-            homePage.EnterAddress("12");
-            homePage.EnterCountry("AP");
-            homePage.EnterPhone("123456789");
+            homePage.EnterNameCadidate("Bhanu");
+            homePage.ClickOnGender();
+            homePage.EnterAddress("Vinobhacolony");
+            homePage.EnterCountry("Andhra Pradesh");
+            homePage.EnterPhone("99999999");
             homePage.EnterTown("Vinobhanagar");
-            homePage.EnterConstituencyMLA("Ramangundam Constituency");
+            homePage.EnterConstituencyMLA("Chander");
             homePage.EnterMandal("Ramangundam Mandal");
             homePage.EnterConstituencyMP("Pedhapalli Constituency");
             homePage.EnterReligion("Christian");
@@ -38,7 +38,7 @@ namespace Azka_Survey.Tests
             loginPage.Enterthename("456789");
             loginPage.Enterthepassword("GGDlyk99@123");
             loginPage.ClickForLogin();
-            homePage.EnterGender("6585");
+            homePage.ClickOnGender();
             homePage.EnterAddress("r98nfic7w4");
             homePage.EnterCountry("funudsj");
             homePage.EnterPhone("983h83bsvbdhd");
