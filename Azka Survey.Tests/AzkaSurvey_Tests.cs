@@ -29,6 +29,8 @@ namespace Azka_Survey.Tests
             homePage.EnterCaste("General");
             homePage.EnterWard("15");
             homePage.ClickOnSaveAndProceed();
+
+
             
             homePage.EnterTotalFamilyMembers("4");
             homePage.EnterNumberOfChildren("2");
