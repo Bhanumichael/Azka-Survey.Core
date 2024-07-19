@@ -13,6 +13,7 @@ namespace Azka_Survey.Core
                 case "Chrome":
                     Driver = new ChromeDriver();
                     break;
+
             }
             return Driver;
         }

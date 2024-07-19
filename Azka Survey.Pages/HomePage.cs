@@ -11,76 +11,89 @@ namespace Azka_Survey.Pages
 {
     public class HomePage
     {
-        IWebElement entername => DriverContext.Driver.FindElement(By.XPath("//div[@class='card-body']//input[@name='name']"));
-        IWebElement entergender => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[6]"));
-        IWebElement enteraddress => DriverContext.Driver.FindElement(By.XPath("//input[contains(text(),'')])[9]"));
-        IWebElement entercountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
-        IWebElement enterphone => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[10]"));
-        IWebElement entertown => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[11]"));
-        IWebElement enterconstituencyMLA => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[12]"));
-        IWebElement entermandal => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[13]"));
-        IWebElement enterconstituencyMP => DriverContext.Driver.FindElement(By.XPath("//input[contains(text(),'')])[14]"));
-        IWebElement enterreligion => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[15]"));
-        IWebElement enterage => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[16]"));
-        IWebElement entercaste => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[17]"));
-        IWebElement enterward => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[18]"));
-        IWebElement saveandproceedbutton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
+        IWebElement enterNameofCandidate => DriverContext.Driver.FindElement(By.XPath("//div[@class='card-body']//input[@name='name']"));
+        IWebElement enterGender => DriverContext.Driver.FindElement(By.XPath("//input[@name='gender']"));
+        IWebElement enterAddress => DriverContext.Driver.FindElement(By.XPath("//input[@name='address']"));
+        IWebElement enterCountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
+        IWebElement enterPhone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
+        IWebElement enterTown => DriverContext.Driver.FindElement(By.XPath("//input[@name='town']"));
+        IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMLA']"));
+        IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("//input[@name='mandal']"));
+        IWebElement enterConstituencyMP => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMP']"));
+        IWebElement enterReligion => DriverContext.Driver.FindElement(By.XPath("//input[@name='religion']"));
+        IWebElement enterAge => DriverContext.Driver.FindElement(By.XPath("//input[@name='age']"));
+        IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("//input[@name='caste']"));
+        IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("//input[@name='ward']"));
+        IWebElement saveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
 
-        public void EnterName(string name)
+        public void EnterNameCadidate(string name)
         {
-            entername.SendKeys(name);
+            enterNameofCandidate.SendKeys(name);
         }
-        public void Entergender(string gender)
+
+        public void EnterGender(string gender)
         {
-            entergender.SendKeys(gender);
+            enterGender.SendKeys(gender);
         }
-        public void Enteraddress(string address)
+
+        public void EnterAddress(string address)
         {
-            enteraddress.SendKeys(address);
+            enterAddress.SendKeys(address);
         }
-        public void Entercountry(string country)
+
+        public void EnterCountry(string country)
         {
-            entercountry.SendKeys(country);
+            enterCountry.SendKeys(country);
         }
-        public void Enterphone(string phone)
+
+        public void EnterPhone(string phone)
         {
-            enterphone.SendKeys(phone);
+            enterPhone.SendKeys(phone);
         }
-        public void Entertown(string town)
+
+        public void EnterTown(string town)
         {
-            entertown.SendKeys(town);
+            enterTown.SendKeys(town);
         }
-        public void EnterconstituencyMLA(string constituencyMLA)
+
+        public void EnterConstituencyMLA(string constituencyMLA)
         {
-            enterconstituencyMLA.SendKeys(constituencyMLA);
+            enterConstituencyMLA.SendKeys(constituencyMLA);
         }
-        public void Entermandal(string entermandal)
+
+        public void EnterMandal(string mandal)
         {
-            entercaste.SendKeys(entermandal);   
+            enterMandal.SendKeys(mandal);
         }
-        public void EnterconstituencyMP(string constituencyMP)
+
+        public void EnterConstituencyMP(string constituencyMP)
         {
-            enterconstituencyMP.SendKeys(constituencyMP);
+            enterConstituencyMP.SendKeys(constituencyMP);
         }
-        public void Enterreligion(string religion)
+
+        public void EnterReligion(string religion)
         {
-            enterreligion.SendKeys(religion);
+            enterReligion.SendKeys(religion);
         }
-        public void Enterage(string age)
+
+        public void EnterAge(string age)
         {
-            enterage.SendKeys(age);
+            enterAge.SendKeys(age);
         }
-        public void Entercaste(string caste)
+
+        public void EnterCaste(string caste)
         {
-            entercaste.SendKeys(caste);
+            enterCaste.SendKeys(caste);
         }
-        public void Enterward(string ward)
+
+        public void EnterWard(string ward)
         {
-            enterward.SendKeys(ward);
+            enterWard.SendKeys(ward);
         }
+
         public void ClickOnSaveAndProceed()
         {
-            saveandproceedbutton.Click();
+            saveAndProceedButton.Click();
         }
     }
 }

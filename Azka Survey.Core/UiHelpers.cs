@@ -10,7 +10,7 @@ namespace Azka_Survey.Core
     {
         public void NavigateToUrl()
         {
-            DriverContext.Driver.Navigate().GoToUrl("https://www.azkasurvey.com/");
+            DriverContext.Driver.Navigate().GoToUrl("https://www.azkasurvey.com/login");
             DriverContext.Driver.Manage().Window.Maximize();
         }
 
