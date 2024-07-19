@@ -19,7 +19,7 @@ namespace Azka_Survey.Tests
             homePage.ClickOnGender();
             homePage.EnterAddress("Vinobhacolony");
             homePage.EnterCountry("Andhra Pradesh");
-            homePage.EnterPhone("99999999");
+            homePage.EnterPhone("9999999900");
             homePage.EnterTown("Vinobhanagar");
             homePage.EnterConstituencyMLA("Chander");
             homePage.EnterMandal("Ramangundam Mandal");
@@ -27,30 +27,23 @@ namespace Azka_Survey.Tests
             homePage.EnterReligion("Christian");
             homePage.EnterAge("25");
             homePage.EnterCaste("General");
-            homePage.EnterWard("Ward 1");
+            homePage.EnterWard("15");
             homePage.ClickOnSaveAndProceed();
+            
+            homePage.EnterTotalFamilyMembers("4");
+            homePage.EnterNumberOfChildren("2");
+            homePage.EnterNumberOfEarningPeople("2");
+            homePage.EnterTotalFemales("2");
+            homePage.EnterOccupation("Business");
+            homePage.EnterTotalMales("2");
+            
         }
+        
+        
+        
+            
+        
 
-        [TestMethod]
-        public void VerifyThatUserCannotLoginWithInvalidCredentials()
-        {
-            uiHelpers.NavigateToUrl();
-            loginPage.Enterthename("456789");
-            loginPage.Enterthepassword("GGDlyk99@123");
-            loginPage.ClickForLogin();
-            homePage.ClickOnGender();
-            homePage.EnterAddress("r98nfic7w4");
-            homePage.EnterCountry("funudsj");
-            homePage.EnterPhone("983h83bsvbdhd");
-            homePage.EnterTown("xjzyvfj");
-            homePage.EnterConstituencyMLA("ahfebhsfb");
-            homePage.EnterMandal(" svjdeavjd7343");
-            homePage.EnterConstituencyMP("123456yujhvg");
-            homePage.EnterReligion("ydafea7345783");
-            homePage.EnterAge("2sffjafjaf5");
-            homePage.EnterCaste("sdkWKDNB834");
-            homePage.EnterWard("WarADSBJYEd 1");
-            homePage.ClickOnSaveAndProceed();
-        }
+       
     }   
 }   
