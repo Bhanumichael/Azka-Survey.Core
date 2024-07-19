@@ -29,18 +29,43 @@ namespace Azka_Survey.Tests
             homePage.EnterCaste("General");
             homePage.EnterWard("15");
             homePage.ClickOnSaveAndProceed();
-
-<<<<<<< HEAD
-
             
+
             homePage.EnterTotalFamilyMembers("4");
             homePage.EnterNumberOfChildren("2");
             homePage.EnterNumberOfEarningPeople("2");
             homePage.EnterTotalFemales("2");
             homePage.EnterOccupation("Business");
             homePage.EnterTotalMales("2");
-            
-=======
+
+            homePage.SaveAndProceedButton();
+
+            homePage.EnterNoOfEarners("2");
+            homePage.EnterHowMuchDebt("10000");
+            homePage.EnterSavindPerMonth("10000");
+            homePage.EnterInterestRate("5");
+            homePage.EnterSourceOfDebt("Bank Home Loan");
+
+            homePage.ClickOnSaveAndProceed();
+
+            homePage.EnterStreetRoads("Good");
+            homePage.EnterTVRoads("Excellent");
+            homePage.EnterDistrictConnectionRoads("Average");
+            homePage.EnterTransportation("Better");
+            homePage.EnterHospitals("Good");
+            homePage.EnterGovernmentSchoolFacility("Good");
+            homePage.EnterFacilityAndAvailability("Worse");
+            homePage.EnterVoteFor("No");
+            homePage.ClickOnSubmit();
+
+
+
+
+
+
+
+
+        }
         [TestMethod]
         public void VerifyThatUserCanLoginAndCheckDashboardViews()
         {
@@ -52,7 +77,7 @@ namespace Azka_Survey.Tests
             homePage.ClickOnViewfile();
             homePage.ClickOnSignout();  
 
->>>>>>> f35d3030b67477c49de5a1ae7c457d9bd93bd905
+
         }
         
         

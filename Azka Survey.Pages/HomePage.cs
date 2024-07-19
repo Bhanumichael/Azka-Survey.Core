@@ -4,6 +4,7 @@ using OpenQA.Selenium.DevTools.V124.Autofill;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace Azka_Survey.Pages
         IWebElement enterCountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
         IWebElement enterPhone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
         IWebElement enterTown => DriverContext.Driver.FindElement(By.XPath("//input[@name='town']"));
-<<<<<<< HEAD
+
         IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[12]"));
         IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[13]"));
         IWebElement enterConstituencyMP => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[14]"));
@@ -26,28 +27,35 @@ namespace Azka_Survey.Pages
         IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[17]"));
         IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[18]"));
         IWebElement clicksaveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("(//button[contains(text(),'')])[5]"));
+
         IWebElement enterTotalFamilyMembers => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='familymember' and @class='form-control']"));
         IWebElement enterNumberOfChildren => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='children' and @class='form-control']"));
         IWebElement enterNumberOfEarningPeople => DriverContext.Driver.FindElement(By.XPath("//select[@name='earningmembers' and @class='form-control']"));
         IWebElement enterTotalFemales => DriverContext.Driver.FindElement(By.XPath("//select[@name='females' and @class='form-control']"));
         IWebElement enterOccupation => DriverContext.Driver.FindElement(By.XPath("//select[@name='occupation' and @class='form-control']"));
         IWebElement enterTotalMales => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='totalmale' and @class='form-control']"));
-        IWebElement SaveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button' and @class='btn btn-primary ms-auto' and @onclick='next()' and text()='Save And Proceed']"));
-=======
-        IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMLA']"));
-        IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("//input[@name='mandal']"));
-        IWebElement enterConstituencyMP => DriverContext.Driver.FindElement(By.XPath("//input[@name='constituencyMP']"));
-        IWebElement enterReligion => DriverContext.Driver.FindElement(By.XPath("//input[@name='religion']"));
-        IWebElement enterAge => DriverContext.Driver.FindElement(By.XPath("//input[@name='age']"));
-        IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("//input[@name='caste']"));
-        IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("//input[@name='ward']"));
+        
         IWebElement saveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
+        IWebElement enterNoOfEarners => DriverContext.Driver.FindElement(By.XPath("//select[@name='totalearner']"));
+        IWebElement enterHowMuchDebt => DriverContext.Driver.FindElement(By.XPath("//select[@name='totaldebt']"));
+        IWebElement enterSavingPerMonth => DriverContext.Driver.FindElement(By.XPath("//select[@name='savingpermonth']"));
+        IWebElement enterInterestRate => DriverContext.Driver.FindElement(By.XPath("//select[@name='interestrate']"));
+        IWebElement enterSourceOfDebt => DriverContext.Driver.FindElement(By.XPath("//select[@name='sourcedebt']"));
+        IWebElement clickOnSaveAndProceed => DriverContext.Driver.FindElement(By.XPath("(//button[contains(text(),'')])[5]"));
+        IWebElement enterStreetRoads => DriverContext.Driver.FindElement(By.XPath("//select[@name='streetroad']"));
+        IWebElement enterTVRoads => DriverContext.Driver.FindElement(By.XPath("//select[@name='tvroads']"));
+        IWebElement enterDistrictConnectionRoads => DriverContext.Driver.FindElement(By.XPath("//select[@name='districtroads']"));
+        IWebElement enterTransportation => DriverContext.Driver.FindElement(By.XPath("//select[@name='transportation']"));
+        IWebElement enterHospitals => DriverContext.Driver.FindElement(By.XPath("//select[@name='hospitals']"));
+        IWebElement enterGovernmentSchoolFacility => DriverContext.Driver.FindElement(By.XPath("//select[@name='schoolfacility']"));
+        IWebElement enterFacilityAndAvailability => DriverContext.Driver.FindElement(By.XPath("//select[@name='facilityandavailability']"));
+        IWebElement enterVoteFor => DriverContext.Driver.FindElement(By.XPath("//select[@name='votefor']"));
+        IWebElement clickOnSubmit => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
+
         IWebElement clickonDashboard => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/dashboard']"));
         IWebElement clickonviewfile => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/view/480']"));
+
         IWebElement clickonSignout => DriverContext.Driver.FindElement(By.XPath("//a[@href='#']"));
-
-
->>>>>>> f35d3030b67477c49de5a1ae7c457d9bd93bd905
 
         public void EnterNameCadidate(string name)
         {
@@ -113,12 +121,12 @@ namespace Azka_Survey.Pages
         {
             enterWard.SendKeys(ward);
         }
-
         public void ClickOnSaveAndProceed()
         {
             clicksaveAndProceedButton.Click();
         }
-<<<<<<< HEAD
+
+
         public void EnterTotalFamilyMembers(string totalFamilyMembers)
         {
             enterTotalFamilyMembers.SendKeys(totalFamilyMembers);
@@ -143,28 +151,102 @@ namespace Azka_Survey.Pages
         {
             enterTotalMales.SendKeys(totalMales);
         }
-        public void saveAndProceedButton()
+        public void SaveAndProceedButton()
         {
-            SaveAndProceedButton.Click();
+            saveAndProceedButton.Click();
+        }
+        public void EnterNoOfEarners(string noOfEarners)
+        {
+            enterNoOfEarners.SendKeys(noOfEarners);
+        }
+        public void EnterHowMuchDebt(string howMuchDebt)
+        {
+            enterHowMuchDebt.SendKeys(howMuchDebt);
+        }
+        public void EnterSavindPerMonth(string savindPerMonth)
+        {
+            enterSavingPerMonth.SendKeys(savindPerMonth);
+        }
+        public void EnterInterestRate(string interestRate)
+        {
+            enterInterestRate.SendKeys(interestRate);
+        }
+        public void EnterSourceOfDebt(string sourceOfDebt)
+        {
+            enterSourceOfDebt.SendKeys(sourceOfDebt);
+        }
+        public void ClickOnSaveAndProcees()
+        {
+            clickOnSaveAndProceed.Click();
+        }
+
+        public void EnterStreetRoads(string streetRoads)
+        {
+            enterStreetRoads.SendKeys(streetRoads);
+        }
+        public void EnterTVRoads(string tvRoads)
+        {
+            enterTVRoads.SendKeys(tvRoads);
+        }
+        public void EnterDistrictConnectionRoads(string districtRoads)
+        {
+            enterDistrictConnectionRoads.SendKeys(districtRoads);
+        }
+        public void EnterTransportation(string transportation)
+        {
+            enterTransportation.SendKeys(transportation);
+        }
+        public void EnterHospitals(string hospitals)
+        {
+            enterHospitals.SendKeys(hospitals);
+        }
+        public void EnterGovernmentSchoolFacility(string governmentSchoolFacility)
+        {
+            enterGovernmentSchoolFacility.SendKeys(governmentSchoolFacility);
+        }
+        public void EnterFacilityAndAvailability(string facilityAndAvailability)
+        {
+            enterFacilityAndAvailability.SendKeys(facilityAndAvailability);
+        }
+        public void EnterVoteFor(string voteFor)
+        {
+            enterVoteFor.SendKeys(voteFor);
+        }
+        public void ClickOnSubmit()
+        {
+            clickOnSubmit.Click();
+        }
 
         public void ClickOnDashboard()
         {
             clickonDashboard.Click();
-
         }
         public void ClickOnViewfile()
         {
             clickonviewfile.Click();
-
         }
-
         public void ClickOnSignout()
         {
-            clickonSignout.Click(); 
- 
+            clickonSignout.Click();
         }
+        
 
 
+        
+
+
+
+
+
+
+
+       
+        
+            
+        
 
     }
 }
+
+
+        
