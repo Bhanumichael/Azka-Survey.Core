@@ -12,7 +12,7 @@ namespace Azka_Survey.Tests
         public void VerifyThatUserCanLoginWithValidCredentials()
         {
             uiHelpers.NavigateToUrl();
-            loginPage.Enterthename("bhanuprakash01.testing@gmail.com");
+            loginPage.Enterthename(".testing@gmail.com");
             loginPage.Enterthepassword("MUjJGb5O");
             loginPage.ClickForLogin();
             homePage.EnterNameCadidate("ABP");
