@@ -25,6 +25,11 @@ namespace Azka_Survey.Pages
         IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("//input[@name='caste']"));
         IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("//input[@name='ward']"));
         IWebElement saveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[@id='next_button']"));
+        IWebElement clickonDashboard => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/dashboard']"));
+        IWebElement clickonviewfile => DriverContext.Driver.FindElement(By.XPath("//a[@href='https://www.azkasurvey.com/view/480']"));
+        IWebElement clickonSignout => DriverContext.Driver.FindElement(By.XPath("//a[@href='#']"));
+
+
 
         public void EnterNameCadidate(string name)
         {
@@ -33,7 +38,7 @@ namespace Azka_Survey.Pages
 
         public void ClickOnGender()
         {
-            enterGender.Click();    
+            enterGender.Click();
         }
 
         public void EnterAddress(string address)
@@ -95,5 +100,23 @@ namespace Azka_Survey.Pages
         {
             saveAndProceedButton.Click();
         }
+        public void ClickOnDashboard()
+        {
+            clickonDashboard.Click();
+
+        }
+        public void ClickOnViewfile()
+        {
+            clickonviewfile.Click();
+
+        }
+
+        public void ClickOnSignout()
+        {
+            clickonSignout.Click(); 
+        }
+
+
+
     }
 }

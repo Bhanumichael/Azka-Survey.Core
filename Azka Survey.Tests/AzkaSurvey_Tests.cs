@@ -32,25 +32,16 @@ namespace Azka_Survey.Tests
         }
 
         [TestMethod]
-        public void VerifyThatUserCannotLoginWithInvalidCredentials()
+        public void VerifyThatUserCanLoginAndCheckDashboardViews()
         {
             uiHelpers.NavigateToUrl();
-            loginPage.Enterthename("456789");
-            loginPage.Enterthepassword("GGDlyk99@123");
+            loginPage.Enterthename("bhanuprakash01.testing@gmail.com");
+            loginPage.Enterthepassword("MUjJGb5O");
             loginPage.ClickForLogin();
-            homePage.ClickOnGender();
-            homePage.EnterAddress("r98nfic7w4");
-            homePage.EnterCountry("funudsj");
-            homePage.EnterPhone("983h83bsvbdhd");
-            homePage.EnterTown("xjzyvfj");
-            homePage.EnterConstituencyMLA("ahfebhsfb");
-            homePage.EnterMandal(" svjdeavjd7343");
-            homePage.EnterConstituencyMP("123456yujhvg");
-            homePage.EnterReligion("ydafea7345783");
-            homePage.EnterAge("2sffjafjaf5");
-            homePage.EnterCaste("sdkWKDNB834");
-            homePage.EnterWard("WarADSBJYEd 1");
-            homePage.ClickOnSaveAndProceed();
+            homePage.ClickOnDashboard();
+            homePage.ClickOnViewfile();
+            homePage.ClickOnSignout();  
+
         }
     }   
 }   
