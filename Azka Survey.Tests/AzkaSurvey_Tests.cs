@@ -15,7 +15,7 @@ namespace Azka_Survey.Tests
             loginPage.Enterthename(".testing@gmail.com");
             loginPage.Enterthepassword("");
             loginPage.ClickForLogin();
-            homePage.EnterNameCadidate("ABP");
+            homePage.EnterNameCadidate("");
             homePage.EnterGender("Male");
             homePage.EnterAddress("12");
             homePage.EnterCountry("AP");
