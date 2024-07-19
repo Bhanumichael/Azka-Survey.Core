@@ -14,12 +14,10 @@ namespace Azka_Survey.Pages
         {
             Assert.IsTrue(entername.Displayed, "The LoginPage is not displayed");
         }
-
         public void Enterthename(string name)
         {
             entername.SendKeys(name);
         }
-
         public void Enterthepassword(string password)
         {
             enterpassword.SendKeys(password);
