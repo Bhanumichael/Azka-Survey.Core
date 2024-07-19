@@ -13,7 +13,7 @@ namespace Azka_Survey.Tests
         {
             uiHelpers.NavigateToUrl();
             loginPage.Enterthename(".testing@gmail.com");
-            loginPage.Enterthepassword("MUjJGb5O");
+            loginPage.Enterthepassword("");
             loginPage.ClickForLogin();
             homePage.EnterNameCadidate("ABP");
             homePage.EnterGender("Male");
