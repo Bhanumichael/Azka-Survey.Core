@@ -1,6 +1,7 @@
 ﻿using Azka_Survey.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools.V124.Autofill;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,11 @@ namespace Azka_Survey.Pages
 {
     public class HomePage
     {
-        IWebElement enterNameofCandidate => DriverContext.Driver.FindElement(By.XPath("//div[@class='card-body']//input[@name='name']"));
-        IWebElement enterGender => DriverContext.Driver.FindElement(By.XPath("(//input[@name='gender'])[1]"));
-        IWebElement enterAddress => DriverContext.Driver.FindElement(By.XPath("//input[@name='address']"));
-        IWebElement enterCountry => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
-        IWebElement enterPhone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
+        IWebElement name => DriverContext.Driver.FindElement(By.XPath("//div[@class='card-body']//input[@name='name']"));
+        IWebElement gender => DriverContext.Driver.FindElement(By.XPath("(//input[@name='gender'])[1]"));
+        IWebElement address => DriverContext.Driver.FindElement(By.XPath("//input[@name='address']"));
+        IWebElement country => DriverContext.Driver.FindElement(By.XPath("//select[@class='form-control']"));
+        IWebElement phone => DriverContext.Driver.FindElement(By.XPath("//input[@name='phone']"));
         IWebElement enterTown => DriverContext.Driver.FindElement(By.XPath("//input[@name='town']"));
         IWebElement enterConstituencyMLA => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[12]"));
         IWebElement enterMandal => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[13]"));
@@ -25,7 +26,7 @@ namespace Azka_Survey.Pages
         IWebElement enterAge => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[16]"));
         IWebElement enterCaste => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[17]"));
         IWebElement enterWard => DriverContext.Driver.FindElement(By.XPath("(//input[contains(text(),'')])[18]"));
-        IWebElement clicksaveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("(//button[contains(text(),'')])[5]"));
+        IWebElement clicksaveAndProceedButton => DriverContext.Driver.FindElement(By.XPath("//button[contains(text(),'Save And Proceed')]"));
         IWebElement enterTotalFamilyMembers => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='familymember' and @class='form-control']"));
         IWebElement enterNumberOfChildren => DriverContext.Driver.FindElement(By.XPath("//div[@class='mb-3']/select[@name='children' and @class='form-control']"));
         IWebElement enterNumberOfEarningPeople => DriverContext.Driver.FindElement(By.XPath("//select[@name='earningmembers' and @class='form-control']"));
@@ -55,25 +56,25 @@ namespace Azka_Survey.Pages
         IWebElement uploadAFile => DriverContext.Driver.FindElement(By.XPath("//button[@type='submit']"));
         IWebElement clickonback => DriverContext.Driver.FindElement(By.XPath("//a[@href='#']"));
 
-        public void EnterNameCadidate(string name)
+        public void EnterNameCadidate(string cName)
         {
-            enterNameofCandidate.SendKeys(name);
+            name.SendKeys(cName);
         }
         public void ClickOnGender()
         {
-            enterGender.Click();
+            gender.Click();
         }
-        public void EnterAddress(string address)
+        public void EnterAddress(string cAddress)
         {
-            enterAddress.SendKeys(address);
+            address.SendKeys(cAddress);
         }
-        public void EnterCountry(string country)
+        public void EnterCountry(string cCountry)
         {
-            enterCountry.SendKeys(country);
+            country.SendKeys(cCountry);
         }
-        public void EnterPhone(string phone)
+        public void EnterPhone(string cPhone)
         {
-            enterPhone.SendKeys(phone);
+            phone.SendKeys(cPhone);
         }
         public void EnterTown(string town)
         {
@@ -109,6 +110,10 @@ namespace Azka_Survey.Pages
         }
         public void ClickOnSaveAndProceed()
         {
+            Actions actions = new Actions(DriverContext.Driver);
+            actions.MoveToElement(clicksaveAndProceedButton);
+            actions.Perform();
+            Thread.Sleep(2000);
             clicksaveAndProceedButton.Click();
         }
         public void EnterTotalFamilyMembers(string totalFamilyMembers)
@@ -218,6 +223,18 @@ namespace Azka_Survey.Pages
         public void UploadAFile()
         {
             uploadAFile.Click();
+        }
+        public void ClickOnBack()
+        {
+            clickonback.Click();
+        }
+        public void EnterPersonalData()
+        {
+            var date = DateTime.Now.ToString("yyyymmddMMHHss");
+            Testdata.candidateName = date + JsonHelpers.GetParamValue("Name");
+            name.SendKeys(Testdata.candidateName);
+            gender.Click();
+            address.SendKeys(JsonHelpers.GetParamValue("Address"));
         }
     }
 }

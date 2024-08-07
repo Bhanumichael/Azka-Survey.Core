@@ -28,6 +28,7 @@ namespace Azka_Survey.Tests
             homePage.EnterAge("25");
             homePage.EnterCaste("General");
             homePage.EnterWard("15");
+            Thread.Sleep(2000);
             homePage.ClickOnSaveAndProceed();
             homePage.EnterTotalFamilyMembers("4");
             homePage.EnterNumberOfChildren("2");
@@ -70,9 +71,11 @@ namespace Azka_Survey.Tests
             loginPage.Enterthename("bhanuprakash01.testing@gmail.com");
             loginPage.Enterthepassword("MUjJGb5O");
             loginPage.ClickForLogin();
-            loginPage.ClickForLogin();
+            
             homePage.ClickOnUploadfile();
             homePage.UploadAFile();
+            homePage.ClickOnBack();
+            
 
 
         }
