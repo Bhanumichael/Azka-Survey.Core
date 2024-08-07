@@ -8,6 +8,11 @@ namespace Azka_Survey.Core.Core
 {
     public class UiHelpers
     {
-       
+        public void NavigateToUrl()
+        {
+            DriverContext.Driver.Navigate().GoToUrl("https://www.azkasurvey.com/login");
+            DriverContext.Driver.Manage().Window.Maximize();
+        }
+
     }
 }

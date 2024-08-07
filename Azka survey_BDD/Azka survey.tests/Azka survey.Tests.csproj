@@ -22,10 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Step definitions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Azka Survey.Core\Azka Survey.Core.csproj" />
   </ItemGroup>
 

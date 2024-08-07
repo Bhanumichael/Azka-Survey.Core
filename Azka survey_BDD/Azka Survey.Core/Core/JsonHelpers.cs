@@ -8,6 +8,10 @@ namespace Azka_Survey.Core.Core
 {
     public class JsonHelpers
     {
-       
+        public static string GetParamValue(string key)
+        {
+
+            return "";
+        }
     }
 }

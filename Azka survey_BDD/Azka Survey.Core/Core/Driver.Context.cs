@@ -10,8 +10,20 @@ using System.Threading.Tasks;
 
 namespace Azka_Survey.Core.Core
 {
-    public class Driver
+    public class DriverContext
     {
-       
+        public static WebDriver Driver;
+
+        public static WebDriver StartDriver(string browser)
+        {
+            switch (browser)
+            {
+                case "Chrome":
+                    Driver = new ChromeDriver();
+                    break;
+
+            }
+            return Driver;
+        }
     }
 }

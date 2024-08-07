@@ -8,6 +8,6 @@ namespace Azka_Survey.Core.Core
 {
     public class Testdata
     {
-        
+        public static string candidateName { get; set; }
     }
 }
